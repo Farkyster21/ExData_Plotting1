@@ -17,6 +17,6 @@ axis(1, at = c(0,200,400,600,800,1000,1200))
 
 ##Writing to a PNG file and closing the device
 dev.copy(png, file = "plot1.png", width = 480, height = 480)
-dev.off(dev.prev())
+dev.off(dev.cur())
 
 
