@@ -22,3 +22,8 @@ data$Timestamp <- strptime(data$Timestamp, "%Y-%m-%d %H:%M:%S")
 plot(data$Timestamp, data$Global_active_power, pch = NA, xlab = "", ylab = "Global Active Power(kilowatts)")
 lines(data$Timestamp,data$Global_active_power)
 
+##Writing to a PNG file and closing the device
+dev.copy(png, file = "plot2.png", width = 480, height = 480)
+dev.off(dev.cur())
+
+
